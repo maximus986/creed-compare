@@ -1,0 +1,16 @@
+$bg-color-first: $cyan;
+$bg-color-second: $teal;
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: $font-manrope-regular;
+  background: linear-gradient(198deg, rgba($bg-color-first, 0.1), rgba($bg-color-second, 0.3));
+  height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}

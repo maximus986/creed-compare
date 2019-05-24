@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta content="author" content="ALeksandar Maksimovic" />
+    <title></title>
+  </head>
+  <body>
+    <!-- Header start -->
+    <header class="main-header bg-light">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+          <a class="navbar-brand" href="#">
+            <img src="images/header/logo.svg" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
+            aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Dashboard<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Reports</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">New application</a>
+              </li>
+          </div>
+          <div class="user">
+            <p class="clinic mb-0 text-dark">GoodMood Clinic</p>
+            <p class="username mb-0 small">John Lebowski</p>
+            <img src="images/header/chevron-down.svg" alt="Arrow down" class="user-dropdown-icon">
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Header end -->
+    <!-- Main content start -->
+    <main class="main-content">
+      <div class="container">
+        <div class="container-inner">
+          <div class="application-breadcrumbs d-flex align-items-center justify-content-center">
+            <div class="application-breadcrumbs-item active d-flex align-items-center">
+              <span class="application-breadcrumbs-item-number">1</span>
+              <span class="application-breadcrumbs-item-text">Application info</span>
+            </div>
+            <div class="application-breadcrumbs-item d-flex align-items-center">
+              <span class="application-breadcrumbs-item-number">2</span>
+              <span class="application-breadcrumbs-item-text">Review offers</span>
+            </div>
+            <div class="application-breadcrumbs-item d-flex align-items-center">
+              <span class="application-breadcrumbs-item-number">3</span>
+              <span class="application-breadcrumbs-item-text">Sign contract</span>
+            </div>
+          </div>
+          <!-- Application form start -->
+          <form action="#" class="application-form">
+            <div class="personal-info">
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <input type="text" name="name" value="" placeholder="Patient’s name or SSN" class="form-control">
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-group">
+                    <label for="date-of-birth">Date of Birth</label>
+                    <input type="date" name="date-of-birth" id="date-of-birth" value="" placeholder="DD/MM/YYYY"
+                      class="form-control">
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-group">
+                    <label for="maritial-status">Maritial status</label>
+                    <select name="maritial-status" class="form-control" id="maritial-status">
+                      <option value="">Select</option>
+                      <option value="1">Married</option>
+                      <option value="2">Single</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" name="phone" id="phone" value="" class="form-control">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" value="" class="form-control">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="annual-income">Individual Annual Income</label>
+                    <input type="number" name="annual-income" id="annual-income" value="" class="form-control">
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="form-group">
+                    <label for="social-number">Social Security Number</label>
+                    <input type="number" name="social-number" id="social-number" value="" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <p class="small">
+                Alimony, Child Support Or separate maintenance income need not to be revealed <br>
+                if you do not wish to it considered as a basis for repaying the loan
+              </p>
+            </div>
+            <div class="address-details">
+              <h2 class="form-subtitle">Address details</h2>
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="address-1">Address 1</label>
+                    <input type="text" name="address-1" id="address-1" value="" class="form-control">
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-group">
+                    <label for="address-2">Address 2</label>
+                    <input type="text" name="address-2" id="address-2" value="" class="form-control" placeholder="Apt #, floor, etc. (optional)">
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="form-group">
+                    <label for="zipcode">Zipcode</label>
+                    <input type="number" name="zipcode" id="zipcode" value="" class="form-control">
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" name="city" id="city" value="" class="form-control">
+                  </div>
+                </div>
+                <div class="col-1">
+                  <div class="form-group">
+                    <label for="state">State</label>
+                    <select name="state" class="form-control" id="state">
+                      <option value="1">FL</option>
+                      <option value="2">CA</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-group">
+                    <label for="housing-status">Housing status</label>
+                    <select name="housing-status" class="form-control optional" id="housing-status">
+                      <option value="">(Optional)</option>
+                      <option value="1">FL</option>
+                      <option value="2">CA</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="form-group">
+                    <label for="monthly-payment">Monthly payment</label>
+                    <input type="text" name="monthly-payment" id="monthly-payment" value="" class="form-control optional" placeholder="(Optional)">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="loan-details">
+              <h2 class="form-subtitle">Loan details</h2>
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="treatment-cost">Treatment cost</label>
+                    <input type="text" name="treatment-cost" id="treatment-cost" value="" class="form-control">
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-group">
+                    <label for="treatment-tipe">Treatment tipe</label>
+                    <select name="treatment-tipe" class="form-control optional" id="treatment-tipe">
+                      <option value="1">Invisalign</option>
+                      <option value="2">Invisalign</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="down-payment">Down payment</label>
+                    <input type="text" name="down-payment" id="down-payment" value="" class="form-control">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="monthly-payment">Monthly payment</label>
+                    <input type="text" name="monthly-payment" id="monthly-payment" value="" class="form-control">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="agreement">
+                      <input id="agreement" type="checkbox"  value="agreement" />
+                      I got the patients consent to share his / her data with the lenders CredCompare works with
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="btn btn-dark btn-theme text-uppercase">SEE RESULTS →</a>
+          </form>
+          <!-- Application form end -->
+        </div>
+      </div>
+    </main>
+    <!-- Main content end -->
+  </body>
+</html>
