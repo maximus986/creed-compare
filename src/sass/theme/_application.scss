@@ -1,5 +1,6 @@
 $breadcrumbs-bg-color: $blue;
 $text-dark: $dark;
+$agreement-text-color: $gray-700;
 $bg-white: $white;
 $active-breadcrumb-bg-color: $primary;
 .main-content {
@@ -40,6 +41,30 @@ $active-breadcrumb-bg-color: $primary;
       }
       &-text {
       }
+    }
+  }
+  .application-form {
+    padding: 30px 30px 77px;
+    background: $bg-white;
+    border-radius: 10px;
+    margin-bottom: 130px;
+    .form-subtitle {
+      font-size: 1.28rem;
+      font-family: $font-manrope-regular;
+      margin-bottom: 15px;
+    }
+    .child-support {
+      color: rgba($text-dark, 0.3);
+      font-size: 0.71rem;
+    }
+    .agreement-text {
+      color: $agreement-text-color;
+      font-size: 1rem;
+      line-height: 1.71;
+      margin-bottom: 0;
+    }
+    .btn-theme-active {
+      display: none;
     }
   }
 }

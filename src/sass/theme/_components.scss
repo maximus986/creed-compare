@@ -1,0 +1,148 @@
+$text-dark: $dark;
+$text-primary: $primary;
+$input-bg-color: $blue;
+$bg-white: $white;
+$bg-dark: $dark;
+$border-primary: $primary;
+$optional-inputs-border-color: $gray-200;
+$checkbox-slider-first-color: $yellow;
+$checkbox-slider-second-color: $light-green;
+
+//Forms
+
+.form-group {
+  margin-bottom: 26px;
+}
+
+.form-control {
+  height: auto;
+  padding: 13px 0 13px 15px;
+  font-size: 1rem;
+  font-family: $font-manrope-medium;
+  color: $text-dark;
+  background-color: rgba($input-bg-color, 0.2);
+  background-clip: padding-box;
+  border: 1px solid transparent;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  caret-color: $text-primary;
+  position: relative;
+  transition: 0.2s linear;
+  &:focus {
+    color: $text-dark;
+    background-color: $bg-white;
+    border: 1px solid $border-primary;
+    outline: 0;
+    box-shadow: 0 2px 4px 0 rgba($border-primary, 0.3);
+    &::placeholder {
+      border-left: 2px solid $border-primary;
+      padding: 4px 0 5px 4px;
+    }
+  }
+  &::placeholder {
+    color: rgba($text-dark, 0.5);
+  }
+  &:hover {
+    border: 1px solid $border-primary;
+    background-color: $bg-white;
+  }
+}
+
+#monthly-payment::placeholder {
+  padding-left: 10px;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  &__right {
+    right: 20px;
+  }
+  &__left {
+    left: 15px;
+  }
+}
+
+.lead-input {
+  padding: 18px 0 18px 15px;
+  font-size: 1.28rem;
+}
+
+label {
+  font-size: 0.71rem;
+  color: rgba($text-dark, 0.3);
+  padding-left: 15px;
+}
+
+.optional {
+  background: $bg-white;
+  color: rgba($text-dark, 0.2);
+  border: 1px solid $optional-inputs-border-color;
+  &::placeholder {
+    color: rgba($text-dark, 0.2);
+  }
+}
+
+// Checkbox slider
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(56deg, $checkbox-slider-first-color, $checkbox-slider-second-color);
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: $bg-white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  transform: translateX(10px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+//Buttons
+
+.btn-theme {
+  padding: 20px;
+  &-disabled {
+    background-image: url(../images/disabled-button-pattern.png);
+    background-position: center;
+    background-color: $bg-dark;
+  }
+}

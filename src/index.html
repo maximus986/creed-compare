@@ -60,79 +60,84 @@
           </div>
           <!-- Application form start -->
           <form action="#" class="application-form">
-            <div class="personal-info">
+            <div class="personal-info mb-5">
               <div class="row">
                 <div class="col-12">
                   <div class="form-group">
-                    <input type="text" name="name" value="" placeholder="Patient’s name or SSN" class="form-control">
+                    <input type="text" name="name" value="" placeholder="Patient’s name or SSN" class="form-control lead-input">
                   </div>
                 </div>
                 <div class="col-4">
                   <div class="form-group">
                     <label for="date-of-birth">Date of Birth</label>
-                    <input type="date" name="date-of-birth" id="date-of-birth" value="" placeholder="DD/MM/YYYY"
-                      class="form-control">
+                    <input type="text" name="date-of-birth" id="date-of-birth" value="" placeholder="DD/MM/YYYY" class="form-control">
+                    <img src="images/header/calendar.svg" alt="Calendar icon" class="input-icon input-icon__right">
                   </div>
                 </div>
                 <div class="col-4">
                   <div class="form-group">
                     <label for="maritial-status">Maritial status</label>
-                    <select name="maritial-status" class="form-control" id="maritial-status">
+                    <select name="maritial-status" class="form-control js-select" id="maritial-status">
                       <option value="">Select</option>
                       <option value="1">Married</option>
                       <option value="2">Single</option>
                     </select>
+                    <img src="images/header/marital-status.svg" alt="Maritial status icon" class="input-icon input-icon__right">
                   </div>
                 </div>
                 <div class="col-6">
                   <div class="form-group">
                     <label for="phone">Phone</label>
                     <input type="tel" name="phone" id="phone" value="" class="form-control">
+                    <img src="images/header/phone.svg" alt="Phone icon" class="input-icon input-icon__right">
                   </div>
                 </div>
                 <div class="col-6">
                   <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" value="" class="form-control">
+                    <img src="images/header/email.svg" alt="email icon" class="input-icon input-icon__right">
                   </div>
                 </div>
                 <div class="col-6">
                   <div class="form-group">
                     <label for="annual-income">Individual Annual Income</label>
-                    <input type="number" name="annual-income" id="annual-income" value="" class="form-control">
+                    <input type="text" name="annual-income" id="annual-income" value="" class="form-control">
+                    <img src="images/header/dollar-sign.svg" alt="Dollar icon" class="input-icon input-icon__left">
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="form-group">
                     <label for="social-number">Social Security Number</label>
-                    <input type="number" name="social-number" id="social-number" value="" class="form-control">
+                    <input type="text" name="social-number" id="social-number" value="" class="form-control">
                   </div>
                 </div>
               </div>
-              <p class="small">
+              <p class="small child-support">
                 Alimony, Child Support Or separate maintenance income need not to be revealed <br>
                 if you do not wish to it considered as a basis for repaying the loan
               </p>
             </div>
-            <div class="address-details">
+            <div class="address-details mb-5">
               <h2 class="form-subtitle">Address details</h2>
               <div class="row">
                 <div class="col-6">
                   <div class="form-group">
                     <label for="address-1">Address 1</label>
                     <input type="text" name="address-1" id="address-1" value="" class="form-control">
+                    <img src="images/header/geo-tag.svg" alt="Geo tag icon" class="input-icon input-icon__left">
                   </div>
                 </div>
                 <div class="col-4">
                   <div class="form-group">
                     <label for="address-2">Address 2</label>
-                    <input type="text" name="address-2" id="address-2" value="" class="form-control" placeholder="Apt #, floor, etc. (optional)">
+                    <input type="text" name="address-2" id="address-2" value="" class="form-control optional" placeholder="Apt #, floor, etc. (optional)">
                   </div>
                 </div>
                 <div class="col-2">
                   <div class="form-group">
                     <label for="zipcode">Zipcode</label>
-                    <input type="number" name="zipcode" id="zipcode" value="" class="form-control">
+                    <input type="text" name="zipcode" id="zipcode" value="" class="form-control">
                   </div>
                 </div>
                 <div class="col-4">
@@ -141,29 +146,33 @@
                     <input type="text" name="city" id="city" value="" class="form-control">
                   </div>
                 </div>
-                <div class="col-1">
+                <div class="col-2">
                   <div class="form-group">
                     <label for="state">State</label>
-                    <select name="state" class="form-control" id="state">
+                    <select name="state" class="form-control js-select" id="state">
+                      <option value="">State</option>State</option>
                       <option value="1">FL</option>
                       <option value="2">CA</option>
                     </select>
+                    <img src="images/header/chevron-down.svg" alt="Arrow down icon" class="input-icon input-icon__right">
                   </div>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                   <div class="form-group">
                     <label for="housing-status">Housing status</label>
-                    <select name="housing-status" class="form-control optional" id="housing-status">
+                    <select name="housing-status" class="form-control optional js-select" id="housing-status">
                       <option value="">(Optional)</option>
                       <option value="1">FL</option>
                       <option value="2">CA</option>
                     </select>
+                    <img src="images/header/chevron-down.svg" alt="Arrow down icon" class="input-icon input-icon__right">
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="form-group">
                     <label for="monthly-payment">Monthly payment</label>
-                    <input type="text" name="monthly-payment" id="monthly-payment" value="" class="form-control optional" placeholder="(Optional)">
+                    <input type="text" name="monthly-payment" id="monthly-payment" value="" class="form-control optional monthly-payment" placeholder="(Optional)">
+                    <img src="images/header/money.svg" alt="Money icon" class="input-icon input-icon__left">
                   </div>
                 </div>
               </div>
@@ -179,35 +188,51 @@
                 </div>
                 <div class="col-4">
                   <div class="form-group">
-                    <label for="treatment-tipe">Treatment tipe</label>
-                    <select name="treatment-tipe" class="form-control optional" id="treatment-tipe">
+                    <label for="treatment-type">Treatment type</label>
+                    <select name="treatment-type" class="form-control optional js-select" id="treatment-tipe">
                       <option value="1">Invisalign</option>
                       <option value="2">Invisalign</option>
                     </select>
+                    <img src="images/header/chevron-down.svg" alt="Arrow down icon" class="input-icon input-icon__right">
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-6 mb-5">
                   <div class="form-group">
                     <label for="down-payment">Down payment</label>
                     <input type="text" name="down-payment" id="down-payment" value="" class="form-control">
+                    <img src="images/header/dollar-sign.svg" alt="Dollar icon" class="input-icon input-icon__left">
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-6 mb-5">
                   <div class="form-group">
                     <label for="monthly-payment">Monthly payment</label>
                     <input type="text" name="monthly-payment" id="monthly-payment" value="" class="form-control">
+                    <img src="images/header/dollar-sign.svg" alt="Dollar icon" class="input-icon input-icon__left">
                   </div>
                 </div>
                 <div class="col-6">
-                  <div class="form-group">
-                    <label for="agreement">
-                      <input id="agreement" type="checkbox"  value="agreement" />
-                      I got the patients consent to share his / her data with the lenders CredCompare works with
+                  <div class="form-group mb-0">
+                      <label for="agreement" class="d-flex">
+                        <div class="switch mr-4">
+                          <input type="checkbox" id="agreement">
+                          <span class="slider round"></span>
+                        </div>
+                        <p class="agreement-text">
+                          I got the patients consent to <br>
+                          share his / her data with the <br>
+                          lenders CredCompare works with
+                        </p> 
+                      </label>
+                      
                   </div>
                 </div>
               </div>
             </div>
-            <a href="#" class="btn btn-dark btn-theme text-uppercase">SEE RESULTS →</a>
+            <div class="form-group text-center">
+              <button href="#" class="btn btn-dark btn-theme btn-theme-disabled text-uppercase" disabled>SEE RESULTS →</button>
+              <button href="#" class="btn btn-dark btn-theme-active text-uppercase">SEE RESULTS →</button>
+            </div>
+            
           </form>
           <!-- Application form end -->
         </div>

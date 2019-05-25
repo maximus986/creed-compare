@@ -3,6 +3,7 @@ import 'bootstrap';
 
 // jQuery plugins
 import { Range } from './Range';
+import { Select } from './Select';
 
 //SASS
 import '../sass/style.scss';
@@ -23,6 +24,13 @@ import manropeLight from '../fonts/Manrope-Light.ttf';
 import manropeMedium from '../fonts/Manrope-Medium.ttf';
 import manropeRegular from '../fonts/Manrope-Regular.ttf';
 import manropeSemibold from '../fonts/Manrope-Semibold.ttf';
-import manropeThin from '../fonts/Manrope-Thin.ttf';  
+import manropeThin from '../fonts/Manrope-Thin.ttf';
 
-$(document).ready(() => {});
+$(document).ready(() => {
+  //Select fields
+  const select = $('.js-select');
+
+  select.each(function() {
+    new Select($(this));
+  });
+});

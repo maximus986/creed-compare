@@ -1,29 +1,48 @@
-$bg-select-color: $gray-100;
-$text-main-color: $primary;
-$bg-select-active-color: $secondary;
+$text-dark: $dark;
 $text-white: $white;
+$text-primary: $primary;
+$input-bg-color: $blue;
 $bg-white: $white;
+$bg-dark: $dark;
+$border-primary: $primary;
+$optional-inputs-border-color: $gray-200;
+$bg-select-active-color: $indigo;
 
 .select2-container--default {
+  
+    position: relative;
   .select2-selection--single {
-    background-color: $bg-select-color;
+    background-color: rgba($input-bg-color, 0.2);
     border: 1px solid transparent;
-    border-radius: 10px;
+    border-radius: 5px;
     height: auto;
-    padding: 9px;
+    padding: 17px 0 16px 15px;
     font-size: 1rem;
     position: relative;
+    transition: 0.2s linear;
+    &:focus {
+      color: $text-dark;
+      background-color: $bg-white;
+      border: 1px solid $border-primary;
+      outline: 0;
+      box-shadow: 0 2px 4px 0 rgba($border-primary, 0.3);
+    }
+    &:hover {
+      border: 1px solid $border-primary;
+      background-color: $bg-white;
+    }
 
     .select2-selection__rendered {
-      color: $text-main-color;
+      color: $text-dark;
       line-height: 1;
       padding-left: 0;
       padding-right: 0;
       font-family: inherit;
+      position: relative;
     }
     .select2-selection__arrow b {
-      border-color: $text-main-color transparent transparent;
-      border-width: 6px 6px 0;
+      border-color: $text-dark transparent transparent;
+      border-width: 0;
       margin-left: -9px;
       margin-top: -1px;
     }
@@ -31,15 +50,15 @@ $bg-white: $white;
 }
 
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
-  border-color: transparent transparent $text-main-color;
-  border-width: 0px 6px 6px;
+  border-color: transparent transparent $text-dark;
+  border-width: 0;
 }
 
 .select2-dropdown {
-  background-color: $bg-white;
-  color: $text-main-color;
-  border: 1px solid $border-color;
-  border-radius: 10px;
+  background-color: $bg-dark;
+  color: $text-white;
+  //border: 1px solid $border-color;
+  border-radius: 5px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
@@ -59,7 +78,7 @@ $bg-white: $white;
 }
 
 .select2-results__option {
-  padding: 9px;
+  padding: 10px 0 10px 15px;
   user-select: none;
 }
 
@@ -73,44 +92,47 @@ $bg-white: $white;
 }
 
 .select2-container--open .select2-dropdown--above {
-  border-bottom: 1px solid $border-color;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  top: -10px;
+  //border-bottom: 1px solid $border-color;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  top: 0;
 }
 
 .select2-container--open .select2-dropdown--below {
-  border-top: 1px solid $border-color;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  top: 10px;
+  //border-top: 1px solid $border-color;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  top: 0;
 }
 
 .select2-container--default .select2-results__option--highlighted {
   background-color: $bg-select-active-color !important;
-  color: $text-white;
+  color: $text-primary !important;
 }
 
 .select2-container--default .select2-results__option--highlighted:first-of-type,
 .select2-container--default .select2-results__option[aria-selected='true']:first-of-type {
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  color: $text-primary;
 }
 .select2-container--default .select2-results__option--highlighted:last-of-type,
 .select2-container--default .select2-results__option[aria-selected='true']:last-of-type {
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color: $text-primary;
 }
 
 .select2-container--default .select2-results__option[aria-selected='true'] {
   background-color: $bg-select-active-color;
-  color: $text-white;
+  color: $text-primary;
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] .select2-container--classic .select2-selection--single {
   background-color: #f7f7f7;
+  color: $text-primary;
   border: 1px solid #aaa;
-  border-radius: 10px;
+  border-radius: 5px;
   outline: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, white), to(#eeeeee));
   background-image: linear-gradient(to bottom, white 50%, #eeeeee 100%);
@@ -122,8 +144,8 @@ $bg-white: $white;
   background-color: #ddd;
   border: none;
   border-left: 1px solid #aaa;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   height: 26px;
   position: absolute;
   top: 1px;
@@ -138,16 +160,16 @@ $bg-white: $white;
 .select2-container--classic[dir='rtl'] .select2-selection--single .select2-selection__arrow {
   border: none;
   border-right: 1px solid #aaa;
-  border-radius: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   left: 1px;
   right: auto;
 }
 .select2-container--classic.select2-container--open.select2-container--above .select2-selection--single {
   border-top: none;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(50%, #eeeeee));
   background-image: linear-gradient(to bottom, white 0%, #eeeeee 50%);
   background-repeat: repeat-x;
@@ -156,8 +178,8 @@ $bg-white: $white;
 
 .select2-container--classic.select2-container--open.select2-container--below .select2-selection--single {
   border-bottom: none;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #eeeeee), to(white));
   background-image: linear-gradient(to bottom, #eeeeee 50%, white 100%);
   background-repeat: repeat-x;
@@ -167,7 +189,7 @@ $bg-white: $white;
 .select2-container--classic .select2-selection--multiple {
   background-color: white;
   border: 1px solid #aaa;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: text;
   outline: 0;
 }
@@ -175,7 +197,7 @@ $bg-white: $white;
 .select2-container--classic .select2-selection--multiple .select2-selection__choice {
   background-color: #e4e4e4;
   border: 1px solid #aaa;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: default;
   float: left;
   margin-right: 5px;
@@ -184,24 +206,65 @@ $bg-white: $white;
 }
 .select2-container--classic.select2-container--open.select2-container--above .select2-selection--multiple {
   border-top: none;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .select2-container--classic.select2-container--open.select2-container--below .select2-selection--multiple {
   border-bottom: none;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .select2-container--default.select2-container--open.select2-container--above .select2-selection--single,
 .select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.optional ~ .select2-container--default {
+  
+    position: relative;
+  .select2-selection--single {
+    background: $bg-white;
+    color: rgba($text-dark, 0.2);
+    border: 1px solid $optional-inputs-border-color;
+    transition: 0.2s linear;
+    position: relative;
+    &::placeholder {
+      color: rgba($text-dark, 0.2);
+    }
+    &:focus {
+      color: $text-dark;
+      background-color: $bg-white;
+      border: 1px solid $border-primary;
+      outline: 0;
+      box-shadow: 0 2px 4px 0 rgba($border-primary, 0.3);
+    }
+    &:hover {
+      border: 1px solid $border-primary;
+      background-color: $bg-white;
+    }
+    .select2-selection__rendered {
+      color: rgba($text-dark, 0.2);
+    }
+  }
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  &__right {
+    right: 20px;
+  }
+  &__left {
+    left: 15px;
+  }
 }
