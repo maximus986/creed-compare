@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta content="author" content="Aleksandar Maksimovic" />
+  <title>Creed Compare</title>
+</head>
+
+<body>
+  <!-- Header start -->
+  <header class="main-header bg-light">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light ">
+        <a class="navbar-brand" href="#">
+          <img src="images/header/logo.svg" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
+          aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Dashboard<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Reports</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">New application</a>
+            </li>
+        </div>
+        <div class="user">
+          <p class="clinic mb-0 text-dark">GoodMood Clinic</p>
+          <p class="username mb-0 small">John Lebowski</p>
+          <img src="images/header/chevron-down.svg" alt="Arrow down" class="user-dropdown-icon">
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- Header end -->
+  <!-- Main content start -->
+  <main class="main-content">
+    <div class="container">
+      <div class="container-inner">
+        <div class="application-breadcrumbs d-flex align-items-center justify-content-center">
+          <div class="application-breadcrumbs-item active d-flex align-items-center">
+            <span class="application-breadcrumbs-item-number">1</span>
+            <span class="application-breadcrumbs-item-text">Application info</span>
+          </div>
+          <div class="application-breadcrumbs-item d-flex align-items-center">
+            <span class="application-breadcrumbs-item-number">2</span>
+            <span class="application-breadcrumbs-item-text">Review offers</span>
+          </div>
+          <div class="application-breadcrumbs-item d-flex align-items-center">
+            <span class="application-breadcrumbs-item-number">3</span>
+            <span class="application-breadcrumbs-item-text">Sign contract</span>
+          </div>
+        </div>
+        <!-- Application form start -->
+        <form action="#" class="application-form">
+          <div class="personal-info mb-5">
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <input type="text" name="name" value="" placeholder="Patient’s name or SSN"
+                    class="form-control lead-input">
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="date-of-birth">Date of Birth</label>
+                  <input type="text" name="date-of-birth" id="date-of-birth" value="" placeholder="DD/MM/YYYY"
+                    class="form-control">
+                  <img src="images/header/calendar.svg" alt="Calendar icon" class="input-icon input-icon__right">
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="maritial-status">Maritial status</label>
+                  <select name="maritial-status" class="form-control js-select" id="maritial-status">
+                    <option value="">Select</option>
+                    <option value="1">Married</option>
+                    <option value="2">Single</option>
+                  </select>
+                  <img src="images/header/marital-status.svg" alt="Maritial status icon"
+                    class="input-icon input-icon__right">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input type="tel" name="phone" id="phone" value="" class="form-control">
+                  <img src="images/header/phone.svg" alt="Phone icon" class="input-icon input-icon__right">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" value="" class="form-control">
+                  <img src="images/header/email.svg" alt="email icon" class="input-icon input-icon__right">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="annual-income">Individual Annual Income</label>
+                  <input type="text" name="annual-income" id="annual-income" value="" class="form-control">
+                  <img src="images/header/dollar-sign.svg" alt="Dollar icon" class="input-icon input-icon__left">
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="form-group">
+                  <label for="social-number">Social Security Number</label>
+                  <input type="text" name="social-number" id="social-number" value="" class="form-control">
+                </div>
+              </div>
+            </div>
+            <p class="small child-support">
+              Alimony, Child Support Or separate maintenance income need not to be revealed <br>
+              if you do not wish to it considered as a basis for repaying the loan
+            </p>
+          </div>
+          <div class="address-details mb-5">
+            <h2 class="form-subtitle">Address details</h2>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="address-1">Address 1</label>
+                  <input type="text" name="address-1" id="address-1" value="" class="form-control">
+                  <img src="images/header/geo-tag.svg" alt="Geo tag icon" class="input-icon input-icon__left">
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="address-2">Address 2</label>
+                  <input type="text" name="address-2" id="address-2" value="" class="form-control optional"
+                    placeholder="Apt #, floor, etc. (optional)">
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="form-group">
+                  <label for="zipcode">Zipcode</label>
+                  <input type="text" name="zipcode" id="zipcode" value="" class="form-control">
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="city">City</label>
+                  <input type="text" name="city" id="city" value="" class="form-control">
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="form-group">
+                  <label for="state">State</label>
+                  <select name="state" class="form-control js-select" id="state">
+                    <option value="">State</option>State</option>
+                    <option value="1">FL</option>
+                    <option value="2">CA</option>
+                  </select>
+                  <img src="images/header/chevron-down.svg" alt="Arrow down icon" class="input-icon input-icon__right">
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="form-group">
+                  <label for="housing-status">Housing status</label>
+                  <select name="housing-status" class="form-control optional js-select" id="housing-status">
+                    <option value="">(Optional)</option>
+                    <option value="1">FL</option>
+                    <option value="2">CA</option>
+                  </select>
+                  <img src="images/header/chevron-down.svg" alt="Arrow down icon" class="input-icon input-icon__right">
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="form-group">
+                  <label for="monthly-payment">Monthly payment</label>
+                  <input type="text" name="monthly-payment" id="monthly-payment" value=""
+                    class="form-control optional monthly-payment" placeholder="(Optional)">
+                  <img src="images/header/money.svg" alt="Money icon" class="input-icon input-icon__left">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="loan-details">
+            <h2 class="form-subtitle">Loan details</h2>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="treatment-cost">Treatment cost</label>
+                  <input type="text" name="treatment-cost" id="treatment-cost" value="" class="form-control">
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="treatment-type">Treatment type</label>
+                  <select name="treatment-type" class="form-control optional js-select" id="treatment-tipe">
+                    <option value="1">Invisalign</option>
+                    <option value="2">Invisalign</option>
+                  </select>
+                  <img src="images/header/chevron-down.svg" alt="Arrow down icon" class="input-icon input-icon__right">
+                </div>
+              </div>
+              <div class="col-6 mb-5">
+                <div class="form-group">
+                  <label for="down-payment">Down payment</label>
+                  <input type="text" name="down-payment" id="down-payment" value="" class="form-control">
+                  <img src="images/header/dollar-sign.svg" alt="Dollar icon" class="input-icon input-icon__left">
+                </div>
+              </div>
+              <div class="col-6 mb-5">
+                <div class="form-group">
+                  <label for="monthly-payment">Monthly payment</label>
+                  <input type="text" name="monthly-payment" id="monthly-payment" value="" class="form-control">
+                  <img src="images/header/dollar-sign.svg" alt="Dollar icon" class="input-icon input-icon__left">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group mb-0">
+                  <label for="agreement" class="d-flex">
+                    <div class="switch mr-4">
+                      <input type="checkbox" id="agreement">
+                      <span class="slider round"></span>
+                    </div>
+                    <p class="agreement-text">
+                      I got the patients consent to <br>
+                      share his / her data with the <br>
+                      lenders CredCompare works with
+                    </p>
+                  </label>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group text-center">
+            <button href="#" class="btn btn-dark btn-theme btn-theme-disabled text-uppercase" disabled>SEE RESULTS
+              →</button>
+            <button href="#" class="btn btn-dark btn-theme-active text-uppercase">SEE RESULTS →</button>
+          </div>
+
+        </form>
+        <!-- Application form end -->
+      </div>
+    </div>
+  </main>
+  <!-- Main content end -->
+</body>
+
+</html>

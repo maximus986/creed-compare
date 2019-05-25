@@ -27,9 +27,17 @@ import manropeSemibold from '../fonts/Manrope-Semibold.ttf';
 import manropeThin from '../fonts/Manrope-Thin.ttf';
 
 $(document).ready(() => {
-  //Select fields
+  //Targeting DOM elements
+  const userDropdownBtn = $('.user-btn');
+  const userDropdown = $('.user-dropdown');
   const select = $('.js-select');
 
+  //Toggle user dropdown menu
+  userDropdownBtn.click(() => {
+    userDropdown.fadeToggle();
+  });
+
+  //Select fields
   select.each(function() {
     new Select($(this));
   });

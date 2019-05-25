@@ -7,6 +7,7 @@ $border-primary: $primary;
 $optional-inputs-border-color: $gray-200;
 $checkbox-slider-first-color: $yellow;
 $checkbox-slider-second-color: $light-green;
+$checkbox-slider-disabled-color: $gray-300;
 
 //Forms
 
@@ -107,7 +108,7 @@ label {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(56deg, $checkbox-slider-first-color, $checkbox-slider-second-color);
+  background: $checkbox-slider-disabled-color;
   transition: 0.4s;
 }
 
@@ -119,12 +120,15 @@ label {
   left: 2px;
   bottom: 2px;
   background-color: $bg-white;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider:before {
   transform: translateX(10px);
+}
+
+input:checked + .slider {
+  background: linear-gradient(56deg, $checkbox-slider-first-color, $checkbox-slider-second-color);
 }
 
 /* Rounded sliders */

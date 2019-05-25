@@ -32,6 +32,14 @@ module.exports = function() {
         filename: 'index.html',
         template: 'src//index.html'
       }),
+      new HtmlWebPackPlugin({
+        filename: 'loader.html',
+        template: 'src//loader.html'
+      }),
+      new HtmlWebPackPlugin({
+        filename: 'offers.html',
+        template: 'src//offers.html'
+      }),
       new MiniCssExtractPlugin({
         filename: 'bundle.css'
       }),
@@ -40,7 +48,7 @@ module.exports = function() {
         $: 'jquery',
         jQuery: 'jquery',
         'window.jQuery': 'jquery'
-      }),
+      })
       //new Dotenv()
       //new FaviconsWebpackPlugin('./src/favicon.png')
     ],
