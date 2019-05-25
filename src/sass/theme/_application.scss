@@ -1,44 +1,10 @@
-$breadcrumbs-bg-color: $blue;
+
 $text-dark: $dark;
 $agreement-text-color: $gray-700;
 $bg-white: $white;
-$active-breadcrumb-bg-color: $primary;
+
 .main-content {
-  .application-breadcrumbs {
-    margin-bottom: 30px;
-    border-radius: 20px;
-    width: 76%;
-    margin: 0 auto 30px;
-    background: rgba($breadcrumbs-bg-color, 0.2);
-    &-item {
-      color: rgba($text-dark, 0.5);
-      font-family: $font-manrope-light;
-      padding: 4px 48px 4px 4px;
-      border-radius: 20px;
-      font-size: 15px;
-      margin-right: 30px;
-      &:last-of-type {
-        margin-right: 0;
-      }
-      &.active {
-        background: $active-breadcrumb-bg-color;
-        color: $text-dark;
-        font-family: $font-manrope-medium;
-        margin-left: -8px;
-      }
-      &-number {
-        width: 33px;
-        height: 33px;
-        line-height: 33px;
-        text-align: center;
-        border-radius: 50%;
-        background: $bg-white;
-        margin-right: 10px;
-      }
-      &-text {
-      }
-    }
-  }
+  
   .application-form {
     padding: 30px 30px 77px;
     background: $bg-white;

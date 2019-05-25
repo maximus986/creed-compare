@@ -1,0 +1,199 @@
+$bg-white: $white;
+$active-breadcrumb-bg-color: $primary;
+$text-dark: $dark;
+$best-offer-border-left-color: $purple;
+$best-offer-border-right-color: $pink;
+
+.main-content {
+  .breadcrumbs {
+    &-item {
+      &:nth-of-type(2) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+  .ranges {
+    .range-wrapper {
+      margin-bottom: 0;
+      img {
+        border-radius: 5px;
+      }
+    }
+  }
+  .offers {
+    table {
+      margin-bottom: 121px;
+      th,
+      td {
+        vertical-align: middle;
+      }
+      th {
+        padding: 10px 0;
+      }
+      tbody {
+        td {
+          background: $bg-white;
+          box-shadow: inset 0 -1px 0 0 rgba($text-dark, 0.1);
+          padding: 25px 0;
+          font-family: $font-manrope-bold;
+        }
+        tr:first-of-type {
+          td:first-of-type {
+            border-top-left-radius: 5px;
+          }
+          td:last-of-type {
+            border-top-right-radius: 5px;
+          }
+        }
+        tr:nth-of-type(2) {
+          td {
+            box-shadow: none;
+          }
+          td:first-of-type {
+            border-bottom-left-radius: 5px;
+          }
+          td:last-of-type {
+            border-bottom-right-radius: 5px;
+          }
+        }
+        tr:nth-of-type(3) {
+          td {
+            box-shadow: none;
+          }
+        }
+        tr:nth-of-type(4) {
+          td:first-of-type {
+            border-top-left-radius: 5px;
+          }
+          td:last-of-type {
+            border-top-right-radius: 5px;
+          }
+        }
+        tr:nth-of-type(5) {
+          // border-radius: 5px;
+          // border-width: 2px;
+          // border-image-source: linear-gradient(262deg, $best-offer-border-right-color, $best-offer-border-left-color);
+          // border-image-slice: 1;
+          // background-image: $bg-white, linear-gradient(262deg, $best-offer-border-right-color, $best-offer-border-left-color);
+          // background-origin: border-box;
+          // background-clip: content-box, border-box;
+          // position: relative;
+          // &:after {
+          //   position: absolute;
+          //   top: -36px;
+          //   bottom: -2px;
+          //   left: -2px;
+          //   right: -2px;
+          //   background: linear-gradient(262deg, $best-offer-border-right-color, $best-offer-border-left-color);
+          //   content: '';
+          //   z-index: -1;
+          //   border-radius: 5px;
+          // }
+          td {
+            box-shadow: none;
+          }
+          td:first-of-type {
+            border-bottom-left-radius: 5px;
+          }
+          td:last-of-type {
+            border-bottom-right-radius: 5px;
+          }
+        }
+        tr:nth-of-type(6) {
+          td {
+            box-shadow: none;
+          }
+        }
+        tr:nth-of-type(7) {
+          td:first-of-type {
+            border-top-left-radius: 5px;
+          }
+          td:last-of-type {
+            border-top-right-radius: 5px;
+          }
+        }
+        tr:nth-of-type(8) {
+          td {
+            box-shadow: none;
+          }
+          td:first-of-type {
+            border-bottom-left-radius: 5px;
+          }
+          td:last-of-type {
+            border-bottom-right-radius: 5px;
+          }
+        }
+        // tr {
+        //   td:first-of-type {
+        //     padding-left: 50px;
+        //   }
+        // }
+      }
+      .loan-amount {
+        font-size: 1.28rem;
+      }
+      .additional-info {
+        font-size: 10px;
+        color: rgba($text-dark, 0.5);
+        margin-top: 7px;
+      }
+    }
+    .offers-number {
+      padding-left: 25px;
+      font-size: 1.28rem;
+      font-family: $font-manrope-regular !important;
+      font-weight: 400;
+    }
+
+    .terms-title {
+      font-size: 0.71rem;
+      color: $text-dark;
+      opacity: 0.5;
+      font-family: $font-manrope-medium;
+    }
+    .terms-title + img {
+      opacity: 0.5;
+    }
+    .best-offer {
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border-style: solid;
+      border-width: 2px;
+      border-image-source: linear-gradient(262deg, $best-offer-border-right-color, $best-offer-border-left-color);
+      border-image-slice: 1;
+      background-image: $bg-white, linear-gradient(262deg, $best-offer-border-right-color, $best-offer-border-left-color);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      position: relative;
+      &:after {
+        position: absolute;
+        top: -3px;
+        bottom: -3px;
+        left: -3px;
+        right: -3px;
+        background: linear-gradient(262deg, $best-offer-border-right-color, $best-offer-border-left-color);
+        content: '';
+        z-index: -1;
+        border-radius: 5px;
+      }
+      &-title {
+        padding: 10px 0;
+        font-size: 10px;
+        letter-spacing: 0.3px;
+        font-family: $font-manrope-extra-bold;
+        background: linear-gradient(262deg, $best-offer-border-right-color, $best-offer-border-left-color);
+      }
+      table {
+        margin-bottom: 0;
+        td {
+          border-radius: 0 !important;
+        }
+      }
+    }
+    .fake-margin {
+      background: transparent;
+      padding: 5px 0;
+    }
+  }
+}

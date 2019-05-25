@@ -40,6 +40,10 @@ module.exports = function() {
         filename: 'offers.html',
         template: 'src//offers.html'
       }),
+      new HtmlWebPackPlugin({
+        filename: 'sign-contract.html',
+        template: 'src//sign-contract.html'
+      }),
       new MiniCssExtractPlugin({
         filename: 'bundle.css'
       }),
