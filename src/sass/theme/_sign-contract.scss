@@ -3,42 +3,45 @@ $text-dark: $dark;
 $next-steps-intro-border-color: $gray-400;
 
 .main-content {
-  .breadcrumbs {
-    &-item {
-      &:first-of-type {
-        margin: 0 0 0 -2px;
-        padding-right: 82px;
-      }
-      &:nth-of-type(2) {
-        margin: 0;
-        padding-right: 82px;
-      }
-      &:nth-of-type(3) {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-      }
-    }
-  }
-  .next-steps {
-    background: $bg-white;
-    border-radius: 10px;
-    padding: 55px 145px 67px;
-    margin-bottom: 170px;
-    &-intro {
-      border-bottom: 1px solid $next-steps-intro-border-color;
-      margin-bottom: 30px;
-      &-text {
-        color: rgba($text-dark, 0.5);
-        margin-bottom: 35px;
+  .sign-contract {
+    .breadcrumbs {
+      &-item {
+        &:first-of-type {
+          margin: 0 0 0 -5px;
+          padding-right: 82px;
+        }
+        &:nth-of-type(2) {
+          margin: 0;
+          padding-right: 82px;
+        }
+        &:nth-of-type(3) {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          padding-right: 60px;
+        }
       }
     }
-    &-info {
-      &-details {
-        padding: 0 20px;
-        &-item {
-          &-text {
-            line-height: 1.79;
-            color: rgba($text-dark, 0.5);
+    .next-steps {
+      background: $bg-white;
+      border-radius: 10px;
+      padding: 55px 145px 67px;
+      margin-bottom: 470px;
+      &-intro {
+        border-bottom: 1px solid $next-steps-intro-border-color;
+        margin-bottom: 30px;
+        &-text {
+          color: rgba($text-dark, 0.5);
+          margin-bottom: 35px;
+        }
+      }
+      &-info {
+        &-details {
+          padding: 0 20px;
+          &-item {
+            &-text {
+              line-height: 1.79;
+              color: rgba($text-dark, 0.5);
+            }
           }
         }
       }

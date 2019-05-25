@@ -1,0 +1,97 @@
+$bg-white: $white;
+$text-dark: $dark;
+$select-way-intro-border-color: $gray-400;
+$select-way-action-btn-bg-color: $blue;
+
+.main-content {
+  .sign-contract-select-way {
+    .breadcrumbs {
+      &-item {
+        &:first-of-type {
+          margin: 0 0 0 -5px;
+          padding-right: 82px;
+        }
+        &:nth-of-type(2) {
+          margin: 0;
+          padding-right: 82px;
+        }
+        &:nth-of-type(3) {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          padding-right: 60px;
+        }
+      }
+    }
+    .select-way {
+      background: $bg-white;
+      border-radius: 10px;
+      padding: 50px 110px 50px;
+      margin-bottom: 420px;
+      &-intro {
+        border-bottom: 1px solid $select-way-intro-border-color;
+        .section-subtitle {
+          margin-bottom: 40px;
+        }
+      }
+      &-info {
+        border-bottom: 1px solid $select-way-intro-border-color;
+        padding: 18px 0;
+        margin-bottom: 20px;
+        &-details {
+          color: rgba($text-dark, 0.5);
+          font-size: 10px;
+          font-family: $font-manrope-medium;
+
+          .loan-amount {
+            &-sum {
+              margin-left: 28px;
+              color: $text-dark;
+              font-size: 18px;
+              font-family: $font-manrope-bold;
+            }
+          }
+          .terms {
+            &-months {
+              color: $text-dark;
+              margin-left: 56px;
+              .months-number {
+                font-family: $font-manrope-bold;
+              }
+              font-size: 14px;
+              font-family: $font-manrope-regular;
+            }
+          }
+          .monthly-cost {
+            &-sum {
+              color: $text-dark;
+              font-size: 14px;
+              font-family: $font-manrope-bold;
+              margin-left: 34px;
+            }
+          }
+        }
+      }
+      &-action {
+        .btn-theme {
+          width: 198px;
+          height: 110px;
+          background: rgba($select-way-action-btn-bg-color, 0.2);
+          transition: background 0.3s linear;
+          &:hover {
+            border-color: transparent;
+            background: rgba($select-way-action-btn-bg-color, 0.4);
+            box-shadow: none;
+          }
+          .select-way-action-icon {
+            margin-bottom: 13px;
+          }
+          .select-way-action-title {
+            font-size: 10px;
+            font-family: $font-manrope-extra-bold;
+            letter-spacing: 0.3px;
+          }
+        }
+      }
+    }
+  }
+}

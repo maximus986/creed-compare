@@ -8,7 +8,6 @@ html {
 body {
   font-family: $font-manrope-regular;
   background: linear-gradient(198deg, rgba($bg-color-first, 0.1), rgba($bg-color-second, 0.3));
-  height: 100vh;
 }
 
 img {
@@ -22,7 +21,7 @@ img {
 
 .section-title {
   font-size: 32px;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .section-subtitle {
