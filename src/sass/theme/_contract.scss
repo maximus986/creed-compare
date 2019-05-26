@@ -1,0 +1,47 @@
+$bg-white: $white;
+$text-dark: $dark;
+$text-white: $white;
+$contract-item-info-bg-color: $dark-blue;
+
+.main-content {
+  .contract {
+    .breadcrumbs {
+      &-item {
+        &:first-of-type {
+          margin: 0 0 0 -5px;
+          padding-right: 82px;
+        }
+        &:nth-of-type(2) {
+          margin: 0;
+          padding-right: 82px;
+        }
+        &:nth-of-type(3) {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          padding-right: 60px;
+        }
+      }
+    }
+    &-item {
+      &-wrapper {
+        .contract-item-info {
+          padding: 10px 0 10px 32px;
+          background: $contract-item-info-bg-color;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          &-text {
+            color: $text-white;
+            font-size: 15px;
+            margin-right: 60px;
+          }
+          .btn-theme {
+            font-size: 10px;
+            font-family: $font-manrope-extra-bold;
+            letter-spacing: 0.3px;
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -35,6 +35,7 @@ $grays: map-merge(
 );
 
 $blue:    #a6d2f1 !default; //theme color
+$dark-blue: #235db3; //theme color
 $indigo:  #32207e !default; //theme color
 $purple:  #a101ff !default; // theme color
 $pink:    #fd00c3 !default; // theme color
@@ -51,6 +52,7 @@ $colors: () !default;
 $colors: map-merge(
   (
     "blue":       $blue,
+    "dark-blue":  $dark-blue,
     "indigo":     $indigo,
     "purple":     $purple,
     "pink":       $pink,
