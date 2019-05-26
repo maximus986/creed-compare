@@ -8,6 +8,14 @@
     <title>Creed Compare</title>
   </head>
   <body>
-    
+    <div class="loader d-flex align-items-center justify-content-center flex-column">
+      <img src="images/loader/logo.gif" alt="Logo spinner" class="spinner" />
+      <h1 class="section-title">Checking lenders…</h1>
+    </div>
+    <script>
+      var timer = setTimeout(function() {
+        window.location = './offers.html';
+      }, 3000);
+    </script>
   </body>
 </html>

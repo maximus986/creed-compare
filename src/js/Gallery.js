@@ -1,5 +1,5 @@
 import 'desoslide/dist/css/jquery.desoslide.css';
-import 'desoslide//dist/js/jquery.desoslide.min.js';
+import 'desoslide/dist/js/jquery.desoslide.min.js';
 
 export class Gallery {
   constructor($gallery, $galleryThumbs) {

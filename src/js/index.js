@@ -5,6 +5,8 @@ import 'bootstrap';
 import { Range } from './Range';
 import { Select } from './Select';
 
+import 'jquery-typeahead/dist/jquery.typeahead.min.css';
+import 'jquery-typeahead/dist/jquery.typeahead.min.js';
 //SASS
 import '../sass/style.scss';
 
@@ -31,6 +33,7 @@ $(document).ready(() => {
   const userDropdownBtn = $('.user-btn');
   const userDropdown = $('.user-dropdown');
   const select = $('.js-select');
+  const submitApplicationBtn = $('.btn-theme-active');
 
   //Toggle user dropdown menu
   userDropdownBtn.click(() => {
@@ -41,4 +44,18 @@ $(document).ready(() => {
   select.each(function() {
     new Select($(this));
   });
+
+  //Redirect to loader page
+  submitApplicationBtn.click(e => {
+    window.location.href = '../loader.html';
+    e.preventDefault();
+  });
+
+  // if ((window.location.href = '../loader.html')) {
+  //   setTimeout(() => {
+  //     window.location.href = '../offers.html';
+  //   }, 3000);
+  // }
+
+  //Search patients
 });

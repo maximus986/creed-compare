@@ -1,10 +1,8 @@
-
 $text-dark: $dark;
 $agreement-text-color: $gray-700;
 $bg-white: $white;
 
 .main-content {
-  
   .application-form {
     padding: 30px 30px 77px;
     background: $bg-white;
@@ -25,8 +23,11 @@ $bg-white: $white;
       line-height: 1.71;
       margin-bottom: 0;
     }
-    .btn-theme-active {
+    .btn-disabled {
       display: none;
+    }
+    .btn-theme-active {
+      //display: none;
     }
   }
 }

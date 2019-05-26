@@ -1,0 +1,12 @@
+$bg-color-first: $cyan;
+$bg-color-second: $teal;
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(198deg, rgba($bg-color-first, 0.1), rgba($bg-color-second, 0.3));
+  .spinner {
+    margin-bottom: 115px;
+    display: block;
+  }
+}
