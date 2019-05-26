@@ -76,8 +76,12 @@
             <div class="personal-info mb-5">
               <div class="row">
                 <div class="col-12">
-                  <div class="form-group" id="the-basics">
+                  <div class="form-group">
                     <input type="text" name="name" value="" placeholder="Patient’s name or SSN" class="form-control lead-input">
+                    <ul class="search-matches list-unstyled mb-0">
+
+                    </ul>
+                    <a href="#" class="create-new-applicant">CRAEATE NEW</a>
                   </div>
                 </div>
                 <div class="col-4">
@@ -91,9 +95,9 @@
                   <div class="form-group">
                     <label for="maritial-status">Maritial status</label>
                     <select name="maritial-status" class="form-control js-select" id="maritial-status">
-                      <option value="">Select</option>
+                      <option value="" disabled selected>Select</option>
                       <option value="1">Married</option>
-                      <option value="2">Single</option>
+                      <option value="2">Not Married</option>
                     </select>
                     <img src="images/header/marital-status.svg" alt="Maritial status icon" class="input-icon input-icon__right">
                   </div>
@@ -115,7 +119,7 @@
                 <div class="col-6">
                   <div class="form-group">
                     <label for="annual-income">Individual Annual Income</label>
-                    <input type="text" name="annual-income" id="annual-income" value="" class="form-control">
+                    <input type="text" name="annual-income" id="annual-income" value="" class="form-control pl-4">
                     <img src="images/header/dollar-sign.svg" alt="Dollar icon" class="input-icon input-icon__left">
                   </div>
                 </div>
@@ -137,7 +141,7 @@
                 <div class="col-6">
                   <div class="form-group">
                     <label for="address-1">Address 1</label>
-                    <input type="text" name="address-1" id="address-1" value="" class="form-control">
+                    <input type="text" name="address-1" id="address-1" value="" class="form-control pl-4">
                     <img src="images/header/geo-tag.svg" alt="Geo tag icon" class="input-icon input-icon__left">
                   </div>
                 </div>
@@ -165,7 +169,7 @@
                     <select name="state" class="form-control js-select" id="state">
                       <option value="">State</option>State</option>
                       <option value="1">FL</option>
-                      <option value="2">CA</option>
+                      <option value="2">AZ</option>
                     </select>
                     <img src="images/header/chevron-down.svg" alt="Arrow down icon" class="input-icon input-icon__right">
                   </div>
@@ -185,7 +189,7 @@
                 <div class="col-3">
                   <div class="form-group">
                     <label for="monthly-payment">Monthly payment</label>
-                    <input type="text" name="monthly-payment" id="monthly-payment" value="" class="form-control optional monthly-payment" placeholder="(Optional)">
+                    <input type="text" name="monthly-payment" id="monthly-payment" value="" class="form-control optional monthly-payment pl-4" placeholder="(Optional)">
                     <img src="images/header/money.svg" alt="Money icon" class="input-icon input-icon__left">
                   </div>
                 </div>
@@ -203,7 +207,7 @@
                 <div class="col-4">
                   <div class="form-group">
                     <label for="treatment-type">Treatment type</label>
-                    <select name="treatment-type" class="form-control optional js-select" id="treatment-tipe">
+                    <select name="treatment-type" class="form-control optional js-select" id="treatment-type">
                       <option value="1">Dental Bridges</option>
                       <option value="2">Dental Crown</option>
                       <option value="3">Dental Implants</option>
@@ -218,14 +222,14 @@
                 <div class="col-6 mb-5">
                   <div class="form-group">
                     <label for="down-payment">Down payment</label>
-                    <input type="text" name="down-payment" id="down-payment" value="" class="form-control">
+                    <input type="text" name="down-payment" id="down-payment" value="" class="form-control pl-4">
                     <img src="images/header/dollar-sign.svg" alt="Dollar icon" class="input-icon input-icon__left">
                   </div>
                 </div>
                 <div class="col-6 mb-5">
                   <div class="form-group">
                     <label for="monthly-payment">Monthly payment</label>
-                    <input type="text" name="monthly-payment" id="monthly-payment" value="" class="form-control">
+                    <input type="text" name="monthly-payment" id="monthly-payment" value="" class="form-control pl-4">
                     <img src="images/header/dollar-sign.svg" alt="Dollar icon" class="input-icon input-icon__left">
                   </div>
                 </div>
@@ -257,5 +261,205 @@
       </div>
     </main>
     <!-- Main content end -->
+    <!-- <script>
+      $(document).ready(function() {
+        const leadInput = document.querySelector( '.lead-input' );
+        const searchMatches = document.querySelector( '.search-matches' );
+        const dateOfBirth = document.getElementById( 'date-of-birth' );
+        const maritialStatus = $( '#maritial-status' );
+        const phone = document.getElementById( 'phone' );
+        const email = document.getElementById( 'email' );
+        const ssn = document.getElementById( 'social-number' );
+        const address_1 = document.getElementById( 'address-1' );
+        const city = document.getElementById( 'city' );
+        const state = $( '#state' );
+        const createNewApplicant = $( '.create-new-applicant' );
+
+        //Application form autocomplete
+
+        //Hard coded patienst data
+        const patients = [
+          {
+            name: 'John Smith',
+            dateOfBirth: '07/09/1980',
+            maritialStatus: 'Married',
+            phone: '202-555-0177',
+            email: 'john.smith.1980@gmail.com',
+            annualIncome: '',
+            ssn: '115-50-3491',
+            address_1: '2693 Washington Avenue',
+            address_2: '',
+            city: 'Phoenix',
+            state: 'AZ',
+            housingStatus: '',
+            monthlyPayment: '',
+            loanDetails: ''
+          },
+          {
+            name: 'Jacob Gordon',
+            dateOfBirth: '07/09/1980',
+            maritialStatus: 'Married',
+            phone: '202-555-0177',
+            email: 'jacob.gordon.1980@gmail.com',
+            annualIncome: '',
+            ssn: '115-50-3491',
+            address_1: '2693 Washington Avenue',
+            address_2: '',
+            city: 'Phoenix',
+            state: 'AZ',
+            housingStatus: '',
+            monthlyPayment: '',
+            loanDetails: ''
+          },
+          {
+            name: 'Jessica Cates',
+            dateOfBirth: '07/09/1980',
+            maritialStatus: 'Married',
+            phone: '202-555-0177',
+            email: 'jessica.cates.1980@gmail.com',
+            annualIncome: '',
+            ssn: '115-50-3491',
+            address_1: '2693 Washington Avenue',
+            address_2: '',
+            city: 'Phoenix',
+            state: 'AZ',
+            housingStatus: '',
+            monthlyPayment: '',
+            loanDetails: ''
+          },
+          {
+            name: 'Jonathan Marcos',
+            dateOfBirth: '07/09/1980',
+            maritialStatus: 'Married',
+            phone: '202-555-0177',
+            email: 'jonathan.marcos.1980@gmail.com',
+            annualIncome: '',
+            ssn: '115-50-3491',
+            address_1: '2693 Washington Avenue',
+            address_2: '',
+            city: 'Phoenix',
+            state: 'AZ',
+            housingStatus: '',
+            monthlyPayment: '',
+            loanDetails: ''
+          },
+          {
+            name: 'Julia keren',
+            dateOfBirth: '07/09/1980',
+            maritialStatus: 'Married',
+            phone: '202-555-0177',
+            email: 'julia.keren.1980@gmail.com',
+            annualIncome: '',
+            ssn: '115-50-3491',
+            address_1: '2693 Washington Avenue',
+            address_2: '',
+            city: 'Phoenix',
+            state: 'AZ',
+            housingStatus: '',
+            monthlyPayment: '',
+            loanDetails: ''
+          },
+          {
+            name: 'John Doe',
+            dateOfBirth: '07/09/1980',
+            maritialStatus: 'Married',
+            phone: '202-555-0177',
+            email: 'john.doe.1980@gmail.com',
+            annualIncome: '',
+            ssn: '115-50-3491',
+            address_1: '2693 Washington Avenue',
+            address_2: '',
+            city: 'Phoenix',
+            state: 'AZ',
+            housingStatus: '',
+            monthlyPayment: '',
+            loanDetails: ''
+          },
+          {
+            name: 'Marcos Alonso',
+            dateOfBirth: '07/09/1980',
+            maritialStatus: 'Not married',
+            phone: '202-555-0177',
+            email: 'marcos.alonso.1980@gmail.com',
+            annualIncome: '',
+            ssn: '115-50-3491',
+            address_1: '2693 Washington Avenue',
+            address_2: '',
+            city: 'Phoenix',
+            state: 'FL',
+            housingStatus: '',
+            monthlyPayment: '',
+            loanDetails: ''
+          }
+        ];
+
+        const names = [];
+
+        patients.map( patient => {
+          names.push( patient.name );
+        } );
+
+        function findMatches( patientName, names ) {
+          return names.filter( name => {
+            const regex = new RegExp( patientName, 'gi' );
+            return name.match( regex );
+          } );
+        }
+
+        function displayMatches() {
+          const matchArray = findMatches( this.value, names );
+          const html = matchArray
+            .map( name => {
+              return `
+            <li class="search-matches-item">${name }</li>   
+          `;
+            } )
+            .join( '' );
+          searchMatches.innerHTML = html;
+          createNewApplicant.css( 'display', 'block' );
+        }
+
+        if ( leadInput )
+        {
+          leadInput.addEventListener( 'keyup', displayMatches );
+        }
+
+        if ( searchMatches )
+        {
+          searchMatches.addEventListener( 'click', function ( e ) {
+            const targetName = e.target.textContent;
+            leadInput.value = targetName;
+            patients.filter( patient => {
+              if ( targetName == patient.name )
+              {
+                dateOfBirth.value = patient.dateOfBirth;
+                phone.value = patient.phone;
+                email.value = patient.email;
+                ssn.value = patient.ssn;
+                address_1.value = patient.address_1;
+                city.value = patient.city;
+
+                if ( patient.maritialStatus == 'Married' )
+                {
+                  maritialStatus.prop( 'selectedIndex', 1 ).trigger( 'change' );
+                } else
+                {
+                  maritialStatus.prop( 'selectedIndex', 2 ).trigger( 'change' );
+                }
+                if ( patient.state == 'FL' )
+                {
+                  state.prop( 'selectedIndex', 1 ).trigger( 'change' );
+                } else
+                {
+                  state.prop( 'selectedIndex', 2 ).trigger( 'change' );
+                }
+              }
+            } );
+            searchMatches.innerHTML = '';
+            createNewApplicant.css( 'display', 'none' );
+          } );
+        }
+      });
+    </script> -->
   </body>
 </html>

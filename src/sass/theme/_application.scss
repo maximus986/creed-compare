@@ -2,6 +2,9 @@ $text-dark: $dark;
 $agreement-text-color: $gray-700;
 $bg-white: $white;
 $hover-btn-bg-color: $indigo;
+$text-white: $white;
+$search-matches-item-hover-bg-color: $indigo;
+$text-primary: $primary;
 
 .main-content {
   .application-form {
@@ -33,6 +36,45 @@ $hover-btn-bg-color: $indigo;
       &:focus {
         box-shadow: inset 0 1px 1px 0 rgba($text-dark, 0.2);
         border: none;
+      }
+    }
+    .search-matches {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      background: $bg-dark;
+      color: $text-white;
+
+      &-item {
+        transition: 0.3s linear;
+        padding: 15px;
+        cursor: pointer;
+        &:hover {
+          color: $text-primary;
+          background: $search-matches-item-hover-bg-color;
+        }
+        &:first-of-type {
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+        }
+      }
+    }
+    .create-new-applicant {
+      display: none;
+      color: rgba($text-white, 0.5);
+      letter-spacing: 0.3px;
+      font-size: 10px;
+      font-family: $font-manrope-extra-bold;
+      padding: 17px 0;
+      text-align: center;
+      border-top: 1px solid rgba($text-white, 0.1);
+      background: $bg-dark;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      box-shadow: 0 5px 20px 0 rgba($text-dark, 0.4);
+      transition: 0.3s linear;
+      &:hover {
+        text-decoration: none;
+        color: rgba($text-white, 0.8);
       }
     }
   }
