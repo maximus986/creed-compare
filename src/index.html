@@ -175,8 +175,9 @@
                     <label for="housing-status">Housing status</label>
                     <select name="housing-status" class="form-control optional js-select" id="housing-status">
                       <option value="">(Optional)</option>
-                      <option value="1">FL</option>
-                      <option value="2">CA</option>
+                      <option value="1">Owner</option>
+                      <option value="2">Renter</option>
+                      <option value="2">Other</option>
                     </select>
                     <img src="images/header/chevron-down.svg" alt="Arrow down icon" class="input-icon input-icon__right">
                   </div>
@@ -203,8 +204,13 @@
                   <div class="form-group">
                     <label for="treatment-type">Treatment type</label>
                     <select name="treatment-type" class="form-control optional js-select" id="treatment-tipe">
-                      <option value="1">Invisalign</option>
-                      <option value="2">Invisalign</option>
+                      <option value="1">Dental Bridges</option>
+                      <option value="2">Dental Crown</option>
+                      <option value="3">Dental Implants</option>
+                      <option value="4">Dentures</option>
+                      <option value="5">Periodontal Reshaping</option>
+                      <option value="6">Root Canals</option>
+                      <option value="7">Sinus Lift</option>
                     </select>
                     <img src="images/header/chevron-down.svg" alt="Arrow down icon" class="input-icon input-icon__right">
                   </div>
@@ -225,12 +231,12 @@
                 </div>
                 <div class="col-6">
                   <div class="form-group mb-0">
-                      <label for="agreement" class="d-flex">
+                      <label for="agreement" class="d-flex pl-0 mb-0">
                         <div class="switch mr-4">
                           <input type="checkbox" id="agreement">
                           <span class="slider round"></span>
                         </div>
-                        <p class="agreement-text">
+                        <p class="agreement-text mb-0">
                           I got the patients consent to <br>
                           share his / her data with the <br>
                           lenders CredCompare works with
@@ -242,8 +248,7 @@
               </div>
             </div>
             <div class="form-group text-center">
-              <button href="#" class="btn btn-dark btn-theme btn-theme-disabled text-uppercase">SEE RESULTS →</button>
-              <button href="#" class="btn btn-dark btn-theme-active text-uppercase">SEE RESULTS →</button>
+              <button href="#" class="btn btn-theme-dark btn-theme-dark-disabled see-results text-uppercase" disabled>SEE RESULTS →</button>
             </div>
             
           </form>

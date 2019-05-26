@@ -9,8 +9,7 @@ $optional-inputs-border-color: $gray-200;
 $bg-select-active-color: $indigo;
 
 .select2-container--default {
-  
-    position: relative;
+  position: relative;
   .select2-selection--single {
     background-color: rgba($input-bg-color, 0.2);
     border: 1px solid transparent;
@@ -75,6 +74,7 @@ $bg-select-active-color: $indigo;
   list-style: none;
   margin: 0;
   padding: 0;
+  max-height: 400px !important;
 }
 
 .select2-results__option {
@@ -229,8 +229,7 @@ $bg-select-active-color: $indigo;
 }
 
 .optional ~ .select2-container--default {
-  
-    position: relative;
+  position: relative;
   .select2-selection--single {
     background: $bg-white;
     color: rgba($text-dark, 0.2);

@@ -1,9 +1,11 @@
 $text-dark: $dark;
+$text-white: $white;
 $text-primary: $primary;
 $input-bg-color: $blue;
 $btn-share-bg-color: $blue;
 $bg-white: $white;
 $bg-dark: $dark;
+$bg-purple: $purple;
 $border-primary: $primary;
 $bg-primary: $primary;
 $optional-inputs-border-color: $gray-200;
@@ -13,6 +15,7 @@ $checkbox-slider-disabled-color: $gray-300;
 $active-breadcrumb-bg-color: $primary;
 $done-breadcrumb-bg-color: $primary;
 $breadcrumbs-bg-color: $blue;
+$hover-btn-bg-color: $indigo;
 
 // Breadcrumbs
 .breadcrumbs {
@@ -157,6 +160,27 @@ label {
 }
 
 /* The slider */
+.toggle {
+  opacity: 0;
+  width: 30px !important;
+  height: 20px !important;
+  border-radius: 34px !important;
+  .toggle-group {
+    .btn-primary {
+      background: linear-gradient(56deg, $checkbox-slider-first-color, $checkbox-slider-second-color);
+    }
+    .btn-light {
+      background: $checkbox-slider-disabled-color;
+    }
+    .toggle-handle {
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      background-color: $bg-white;
+    }
+  }
+}
+
 .slider {
   position: absolute;
   cursor: pointer;
@@ -198,12 +222,29 @@ input:checked + .slider {
 
 //Buttons
 
-.btn-theme {
+.btn-theme-dark {
   padding: 20px;
-  &-disabled {
-    background-image: url(../images/disabled-button-pattern.png);
+  border-radius: 5px;
+  color: $text-white;
+  background-color: $bg-dark;
+  font-family: $font-manrope-extra-bold;
+  transition: 0.3s linear;
+  &:hover {
+    background: $hover-btn-bg-color;
+    color: $text-white;
+  }
+  &:active,
+  &:focus {
+    box-shadow: inset 0 1px 1px 0 rgba($text-dark, 0.2);
+    border-color: transparent;
+  }
+}
+.btn-theme-dark-disabled {
+  background-image: url(../images/disabled-primary-button-pattern.png);
+  background-position: center;
+  &:hover {
+    background-image: url(../images/disabled-primary-button-pattern.png);
     background-position: center;
-    background-color: $bg-dark;
   }
 }
 
@@ -213,13 +254,22 @@ input:checked + .slider {
   letter-spacing: 0.3px;
   font-family: $font-manrope-extra-bold;
   font-size: 10px;
+  transition: 0.3s linear;
+  &:active,
+  &:focus {
+    box-shadow: inset 0 1px 1px 0 rgba($text-dark, 0.2);
+  }
 }
 
 .btn-share {
   background: rgba($btn-share-bg-color, 0.2);
   transition: 0.3s linear;
   &:hover {
-    background: darken($btn-share-bg-color, 2%);
+    background: rgba($btn-share-bg-color, 0.3);
+  }
+  &:active,
+  &:focus {
+    box-shadow: inset 0 1px 1px 0 rgba($text-dark, 0.2);
   }
 }
 

@@ -2,8 +2,6 @@ const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = function() {
   return {
@@ -61,8 +59,6 @@ module.exports = function() {
         jQuery: 'jquery',
         'window.jQuery': 'jquery'
       })
-      //new Dotenv()
-      //new FaviconsWebpackPlugin('./src/favicon.png')
     ],
     module: {
       rules: [

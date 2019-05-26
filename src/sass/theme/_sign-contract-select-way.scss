@@ -75,12 +75,17 @@ $select-way-action-btn-bg-color: $blue;
         .btn-theme {
           width: 198px;
           height: 110px;
+          padding-top: 20px;
           background: rgba($select-way-action-btn-bg-color, 0.2);
           transition: background 0.3s linear;
           &:hover {
             border-color: transparent;
-            background: rgba($select-way-action-btn-bg-color, 0.4);
+            background: rgba($select-way-action-btn-bg-color, 0.3);
             box-shadow: none;
+          }
+          &:active,
+          &:focus {
+            box-shadow: inset 0 1px 1px 0 rgba($text-dark, 0.2);
           }
           .select-way-action-icon {
             margin-bottom: 13px;

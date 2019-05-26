@@ -2,11 +2,10 @@
 import 'bootstrap';
 
 // jQuery plugins
-import { Range } from './Range';
 import { Select } from './Select';
 
-import 'jquery-typeahead/dist/jquery.typeahead.min.css';
-import 'jquery-typeahead/dist/jquery.typeahead.min.js';
+import 'bootstrap4-toggle/css/bootstrap4-toggle.css';
+import 'bootstrap4-toggle/js/bootstrap4-toggle.js';
 //SASS
 import '../sass/style.scss';
 
@@ -33,7 +32,7 @@ $(document).ready(() => {
   const userDropdownBtn = $('.user-btn');
   const userDropdown = $('.user-dropdown');
   const select = $('.js-select');
-  const submitApplicationBtn = $('.btn-theme-active');
+  const submitApplicationBtn = $('.see-results');
 
   //Toggle user dropdown menu
   userDropdownBtn.click(() => {
@@ -45,17 +44,23 @@ $(document).ready(() => {
     new Select($(this));
   });
 
-  //Redirect to loader page
-  submitApplicationBtn.click(e => {
-    window.location.href = '../loader.html';
-    e.preventDefault();
+  //Enable/disable button
+
+  $('#agreement').change(function() {
+    if ($(this).prop('checked')) {
+      $('.see-results')
+        .removeAttr('disabled')
+        .removeClass('btn-theme-dark-disabled');
+    } else {
+      $('.see-results')
+        .attr('disabled', 'disabled')
+        .addClass('btn-theme-dark-disabled');
+    }
   });
 
-  // if ((window.location.href = '../loader.html')) {
-  //   setTimeout(() => {
-  //     window.location.href = '../offers.html';
-  //   }, 3000);
-  // }
-
-  //Search patients
+  //Redirect to loader page
+  submitApplicationBtn.click(e => {
+    window.location.href = 'loader.html';
+    e.preventDefault();
+  });
 });
