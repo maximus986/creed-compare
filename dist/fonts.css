@@ -13,7 +13,7 @@
   font-style: normal;
   src: url(./fonts/Manrope-ExtraBold.generated.eot);
   src: url(./fonts/Manrope-ExtraBold.generated.woff2) format('woff2'), url(./fonts/Manrope-ExtraBold.generated.ttf) format('truetype'),
-    url(/./fonts/Manrope-ExtraBold.generated.woff) format('woff');
+    url(./fonts/Manrope-ExtraBold.generated.woff) format('woff');
 }
 
 @font-face {

@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = function() {
   return {
@@ -58,7 +59,8 @@ module.exports = function() {
         $: 'jquery',
         jQuery: 'jquery',
         'window.jQuery': 'jquery'
-      })
+      }),
+      new FaviconsWebpackPlugin('./src/favicon.png')
     ],
     module: {
       rules: [

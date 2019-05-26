@@ -227,7 +227,7 @@ input:checked + .slider {
   border-radius: 5px;
   color: $text-white;
   background-color: $bg-dark;
-  font-family: $font-manrope-extra-bold;
+  font-family: $font-manrope-bold;
   transition: 0.3s linear;
   &:hover {
     background: $hover-btn-bg-color;
@@ -252,7 +252,7 @@ input:checked + .slider {
   padding: 14px 21px;
   border-radius: 5px;
   letter-spacing: 0.3px;
-  font-family: $font-manrope-extra-bold;
+  font-family: $font-manrope-bold;
   font-size: 10px;
   transition: 0.3s linear;
   &:active,

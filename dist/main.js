@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "5f7b08865f4d060f778d";
+/******/ 	var hotCurrentHash = "fcb8584dda94ee3641de";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -29638,8 +29638,6 @@ $(document).ready(function () {
   userDropdownBtn.click(function () {
     userDropdown.fadeToggle();
   }); //Application form autocomplete
-
-
   //Hard coded patienst data
 
   var patients = [{
