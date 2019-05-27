@@ -4,6 +4,9 @@ $text-dark: $dark;
 $best-offer-border-left-color: $purple;
 $best-offer-border-right-color: $pink;
 $btn-share-bg-color: $blue;
+$back-bar-bg-color: $blue;
+$selected-bar-bg-color: $primary;
+$pointer-border-color: $blue;
 
 .main-content {
   .breadcrumbs {
@@ -15,10 +18,66 @@ $btn-share-bg-color: $blue;
     }
   }
   .ranges {
-    .range-wrapper {
-      margin-bottom: 0;
-      img {
-        border-radius: 5px;
+    .range {
+      padding: 19px 30px 0 26px;
+      background: $bg-white;
+      border-radius: 5px;
+      &-title {
+        font-size: 15px;
+        font-family: $font-manrope-medium;
+        display: inline-block;
+        margin-bottom: 9px;
+      }
+      &-unit {
+        font-size: 14px;
+        font-family: $font-manrope-regular;
+        color: rgba($text-dark, 0.5);
+        margin-left: 10px;
+        display: inline-block;
+      }
+      .values {
+        position: relative;
+        margin-left: -8px;
+        margin-right: -8px;
+        .val {
+          position: absolute;
+          bottom: 22px;
+          font-family: $font-manrope-medium;
+          font-size: 15px;
+          &__left {
+            left: 0;
+          }
+          &__right {
+            right: 0;
+          }
+        }
+      }
+      .slider-container {
+        padding-bottom: 60px;
+        .back-bar {
+          height: 4px;
+          background-image: none;
+          background-color: rgba($back-bar-bg-color, 0.3);
+          border-radius: 2px;
+          .selected-bar {
+            height: 4px;
+            background-image: none;
+            background-color: $selected-bar-bg-color;
+            border-radius: 2px;
+          }
+          .pointer {
+            width: 20px;
+            height: 20px;
+            top: -8px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border: 0.5px solid rgba($pointer-border-color, 0.26);
+            box-shadow: 0 2px 4px 0 rgba($pointer-border-color, 0.3);
+            background-color: $bg-white;
+            background-image: none;
+            cursor: grab;
+          }
+        }
       }
     }
   }
@@ -31,6 +90,18 @@ $btn-share-bg-color: $blue;
       }
       th {
         padding: 10px 0;
+        &:nth-of-type(2) {
+          padding-right: 30px;
+        }
+        &:nth-of-type(3) {
+          padding-right: 45px;
+        }
+        &:nth-of-type(4) {
+          padding-right: 72px;
+        }
+        &:nth-of-type(5) {
+          padding-right: 27px;
+        }
       }
       tbody {
         td {

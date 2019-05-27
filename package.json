@@ -1,7 +1,7 @@
 {
-  "name": "webpack-starter",
+  "name": "creed-compare",
   "version": "1.0.0",
-  "description": "webpack-starter",
+  "description": "creed-compare mockup",
   "main": "index.js",
   "scripts": {
     "build": "npx webpack --config webpack.config.js",
@@ -41,9 +41,8 @@
     "bootstrap": "^4.3.1",
     "fontface-loader": "0.0.8",
     "jquery": "^3.3.1",
-    "jquery-typeahead": "^2.10.6",
+    "jquery-range": "^1.0.0",
     "popper.js": "^1.15.0",
-    "select2": "^4.0.6-rc.1",
-    "typeahead.js": "git+https://git@github.com//twitter/typeahead.js"
+    "select2": "^4.0.6-rc.1"
   }
 }

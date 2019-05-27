@@ -77,24 +77,38 @@
         </div>
       </div>
     </div>
-    <!-- Ranges start -->
     <section class="ranges">
       <div class="container">
         <div class="row">
           <div class="col-4">
-            <figure class="range-wrapper">
-              <img src="images/offers/range-1.png" alt="Range 1">
-            </figure>
+            <div class="range">
+              <span class="range-title">Monthly cost <span class="range-unit">$</span></span>
+              <input type="hidden" id="monthly-cost-slider" class="monthly-cost-slider" />
+              <div class="values">
+                <span class="low-val-mcs val val__left">194</span>
+                <span class="high-val-mcs val val__right">300</span>
+              </div>
+            </div>
           </div>
           <div class="col-4">
-            <figure class="range-wrapper">
-              <img src="images/offers/range-2.jpg" alt="Range 2">
-            </figure>
+            <div class="range">
+              <span class="range-title">Down payment <span class="range-unit">$</span></span>
+              <input type="hidden" id="down-payment-slider" class="down-payment-slider" />
+              <div class="values">
+                <span class="low-val-dps val val__left">2,650</span>
+                <span class="high-val-dps val val__right">4,000</span>
+              </div>
+            </div>
           </div>
           <div class="col-4">
-            <figure class="range-wrapper">
-              <img src="images/offers/range-3.jpg" alt="Range 2">
-            </figure>
+            <div class="range">
+              <span class="range-title">Terms <span class="range-unit">Months</span></span>
+              <input type="hidden" id="terms-slider" class="terms-slider" />
+              <div class="values">
+                <span class="low-val-ts val val__left">32</span>
+                <span class="high-val-ts val val__right">42</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -138,7 +152,7 @@
             <tbody>
               <tr>
                 <td>
-                  <figure class="brands-wrapper mb-0 text-center">
+                  <figure class="brands-wrapper mb-0">
                     <img src="images/offers/wells-fargo-logo.png" alt="Wells fargo">
                   </figure>
                 </td>
@@ -160,7 +174,7 @@
               </tr>
               <tr>
               <td>
-                <figure class="brands-wrapper mb-0 text-center">
+                <figure class="brands-wrapper mb-0">
                   <img src="images/offers/prosper-logo.png" alt="Wells fargo">
                 </figure>
               </td>
@@ -191,7 +205,7 @@
               </tr>
               <tr>
                 <td>
-                  <figure class="brands-wrapper mb-0 text-center">
+                  <figure class="brands-wrapper mb-0">
                     <img src="images/offers/marcus-logo.png" alt="Wells fargo">
                   </figure>
                 </td>
@@ -216,7 +230,7 @@
               </tr>
               <tr>
                 <td>
-                  <figure class="brands-wrapper mb-0 text-center">
+                  <figure class="brands-wrapper mb-0">
                     <img src="images/offers/lending-point-logo.png" alt="Wells fargo">
                   </figure>
                 </td>
@@ -239,7 +253,7 @@
               </tr>
               <tr>
                 <td>
-                  <figure class="brands-wrapper mb-0 text-center">
+                  <figure class="brands-wrapper mb-0">
                     <img src="images/offers/lending-point-logo.png" alt="Wells fargo">
                   </figure>
                 </td>

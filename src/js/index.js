@@ -3,6 +3,8 @@ import 'bootstrap';
 
 // jQuery plugins
 import { Select } from './Select';
+import 'jquery-range/jquery.range.css';
+import 'jquery-range/jquery.range';
 
 //SASS
 import '../sass/style.scss';
@@ -43,6 +45,9 @@ $(document).ready(() => {
   const zipcode = document.getElementById('zipcode');
   const state = $('#state');
   const createNewApplicant = $('.create-new-applicant');
+  const monthlyCostSlider = $('.monthly-cost-slider');
+  const downPaymentSlider = $('.down-payment-slider');
+  const termsSlider = $('.terms-slider');
 
   //Toggle user dropdown menu
   userDropdownBtn.click(() => {
@@ -259,4 +264,57 @@ $(document).ready(() => {
     window.location.href = 'loader.html';
     e.preventDefault();
   });
+
+  //Range sliders
+  monthlyCostSlider.jRange({
+    from: 194,
+    to: 300,
+    width: '100%',
+    showLabels: false,
+    isRange: true,
+    showScale: false,
+    onstatechange: function(value) {
+      const valArrMCS = JSON.parse('[' + value + ']');
+      const lowValMCS = valArrMCS[0];
+      const highValMCS = valArrMCS[1];
+      $('.low-val-mcs').text(`${lowValMCS}`);
+      $('.high-val-mcs').text(`${highValMCS}`);
+    }
+  });
+
+  downPaymentSlider.jRange({
+    from: 2650,
+    to: 4000,
+    width: '100%',
+    showLabels: false,
+    isRange: true,
+    showScale: false,
+    onstatechange: function(value) {
+      const valArrDPS = JSON.parse('[' + value + ']');
+      const lowValDPS = valArrDPS[0];
+      const highValDPS = valArrDPS[1];
+      $('.low-val-dps').text(`${lowValDPS}`);
+      $('.high-val-dps').text(`${highValDPS}`);
+    }
+  });
+
+  termsSlider.jRange({
+    from: 30,
+    to: 42,
+    width: '100%',
+    showLabels: false,
+    isRange: true,
+    showScale: false,
+    onstatechange: function(value) {
+      const valArrTS = JSON.parse('[' + value + ']');
+      const lowValTS = valArrTS[0];
+      const highValTS = valArrTS[1];
+      $('.low-val-ts').text(`${lowValTS}`);
+      $('.high-val-ts').text(`${highValTS}`);
+    }
+  });
+
+  $(monthlyCostSlider).jRange('setValue', '194,300');
+  $(downPaymentSlider).jRange('setValue', '2650,4000');
+  $(termsSlider).jRange('setValue', '30,42');
 });
