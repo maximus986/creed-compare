@@ -31,17 +31,18 @@ $(document).ready(() => {
   const userDropdown = $('.user-dropdown');
   const select = $('.js-select');
   const submitApplicationBtn = $('.see-results');
-  const leadInput = document.querySelector( '.lead-input' );
-  const searchMatches = document.querySelector( '.search-matches' );
-  const dateOfBirth = document.getElementById( 'date-of-birth' );
-  const maritialStatus = $( '#maritial-status' );
-  const phone = document.getElementById( 'phone' );
-  const email = document.getElementById( 'email' );
-  const ssn = document.getElementById( 'social-number' );
-  const address_1 = document.getElementById( 'address-1' );
-  const city = document.getElementById( 'city' );
-  const state = $( '#state' );
-  const createNewApplicant = $( '.create-new-applicant' );
+  const leadInput = document.querySelector('.lead-input');
+  const searchMatches = document.querySelector('.search-matches');
+  const dateOfBirth = document.getElementById('date-of-birth');
+  const maritialStatus = $('#maritial-status');
+  const phone = document.getElementById('phone');
+  const email = document.getElementById('email');
+  const ssn = document.getElementById('social-number');
+  const address_1 = document.getElementById('address-1');
+  const city = document.getElementById('city');
+  const zipcode = document.getElementById('zipcode');
+  const state = $('#state');
+  const createNewApplicant = $('.create-new-applicant');
 
   //Toggle user dropdown menu
   userDropdownBtn.click(() => {
@@ -62,6 +63,7 @@ $(document).ready(() => {
       ssn: '115-50-3491',
       address_1: '2693 Washington Avenue',
       address_2: '',
+      zipcode: '85034',
       city: 'Phoenix',
       state: 'AZ',
       housingStatus: '',
@@ -78,6 +80,7 @@ $(document).ready(() => {
       ssn: '115-50-3491',
       address_1: '2693 Washington Avenue',
       address_2: '',
+      zipcode: '85034',
       city: 'Phoenix',
       state: 'AZ',
       housingStatus: '',
@@ -94,6 +97,7 @@ $(document).ready(() => {
       ssn: '115-50-3491',
       address_1: '2693 Washington Avenue',
       address_2: '',
+      zipcode: '85034',
       city: 'Phoenix',
       state: 'AZ',
       housingStatus: '',
@@ -110,6 +114,7 @@ $(document).ready(() => {
       ssn: '115-50-3491',
       address_1: '2693 Washington Avenue',
       address_2: '',
+      zipcode: '85034',
       city: 'Phoenix',
       state: 'AZ',
       housingStatus: '',
@@ -126,6 +131,7 @@ $(document).ready(() => {
       ssn: '115-50-3491',
       address_1: '2693 Washington Avenue',
       address_2: '',
+      zipcode: '85034',
       city: 'Phoenix',
       state: 'AZ',
       housingStatus: '',
@@ -142,6 +148,7 @@ $(document).ready(() => {
       ssn: '115-50-3491',
       address_1: '2693 Washington Avenue',
       address_2: '',
+      zipcode: '85034',
       city: 'Phoenix',
       state: 'AZ',
       housingStatus: '',
@@ -158,6 +165,7 @@ $(document).ready(() => {
       ssn: '115-50-3491',
       address_1: '2693 Washington Avenue',
       address_2: '',
+      zipcode: '85034',
       city: 'Phoenix',
       state: 'FL',
       housingStatus: '',
@@ -168,76 +176,69 @@ $(document).ready(() => {
 
   const names = [];
 
-  patients.map( patient =>
-  {
-    names.push( patient.name );
-  } );
+  patients.map(patient => {
+    names.push(patient.name);
+  });
 
-  function findMatches( patientName, names )
-  {
-    return names.filter( name =>
-    {
-      const regex = new RegExp( patientName, 'gi' );
-      return name.match( regex );
-    } );
+  function findMatches(patientName, names) {
+    return names.filter(name => {
+      const regex = new RegExp(patientName, 'gi');
+      return name.match(regex);
+    });
   }
 
-  function displayMatches()
-  {
-    const matchArray = findMatches( this.value, names );
+  function displayMatches() {
+    const matchArray = findMatches(this.value, names);
     const html = matchArray
-      .map( name =>
-      {
+      .map(name => {
         return `
-            <li class="search-matches-item">${name }</li>   
+            <li class="search-matches-item">${name}</li>   
           `;
-      } )
-      .join( '' );
+      })
+      .join('');
     searchMatches.innerHTML = html;
-    createNewApplicant.css( 'display', 'block' );
+    createNewApplicant.css('display', 'block');
   }
 
-  if ( leadInput ) {
-    leadInput.addEventListener( 'keyup', displayMatches );
+  if (leadInput) {
+    leadInput.addEventListener('keyup', displayMatches);
   }
 
-  if ( searchMatches ) {
-    searchMatches.addEventListener( 'click', function ( e )
-    {
+  if (searchMatches) {
+    searchMatches.addEventListener('click', function(e) {
       const targetName = e.target.textContent;
       leadInput.value = targetName;
-      patients.filter( patient =>
-      {
-        if ( targetName == patient.name ) {
+      patients.filter(patient => {
+        if (targetName == patient.name) {
           dateOfBirth.value = patient.dateOfBirth;
           phone.value = patient.phone;
           email.value = patient.email;
           ssn.value = patient.ssn;
           address_1.value = patient.address_1;
           city.value = patient.city;
+          zipcode.value = patient.zipcode;
 
-          if ( patient.maritialStatus == 'Married' ) {
-            maritialStatus.prop( 'selectedIndex', 1 ).trigger( 'change' );
+          if (patient.maritialStatus == 'Married') {
+            maritialStatus.prop('selectedIndex', 1).trigger('change');
           } else {
-            maritialStatus.prop( 'selectedIndex', 2 ).trigger( 'change' );
+            maritialStatus.prop('selectedIndex', 2).trigger('change');
           }
-          if ( patient.state == 'FL' ) {
-            state.prop( 'selectedIndex', 1 ).trigger( 'change' );
+          if (patient.state == 'FL') {
+            state.prop('selectedIndex', 1).trigger('change');
           } else {
-            state.prop( 'selectedIndex', 2 ).trigger( 'change' );
+            state.prop('selectedIndex', 2).trigger('change');
           }
         }
-      } );
+      });
       searchMatches.innerHTML = '';
-      createNewApplicant.css( 'display', 'none' );
-    } );
+      createNewApplicant.css('display', 'none');
+    });
   }
 
   //Select fields
   select.each(function() {
     new Select($(this));
   });
-
 
   //Enable/disable button
 

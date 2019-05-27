@@ -231,9 +231,7 @@ $bg-select-active-color: $indigo;
 .optional ~ .select2-container--default {
   position: relative;
   .select2-selection--single {
-    background: $bg-white;
     color: rgba($text-dark, 0.2);
-    border: 1px solid $optional-inputs-border-color;
     transition: 0.2s linear;
     position: relative;
     &::placeholder {
