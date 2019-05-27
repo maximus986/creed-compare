@@ -41,7 +41,7 @@ $pointer-border-color: $blue;
         margin-right: -8px;
         .val {
           position: absolute;
-          bottom: 22px;
+          bottom: 19px;
           font-family: $font-manrope-medium;
           font-size: 15px;
           &__left {
@@ -53,7 +53,7 @@ $pointer-border-color: $blue;
         }
       }
       .slider-container {
-        padding-bottom: 60px;
+        padding-bottom: 55px;
         .back-bar {
           height: 4px;
           background-image: none;

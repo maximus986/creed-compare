@@ -4,6 +4,9 @@ $select-way-intro-border-color: $gray-400;
 $select-way-action-btn-bg-color: $blue;
 
 .main-content {
+  .container-inner {
+    width: 78%;
+  }
   .sign-contract-select-way {
     .breadcrumbs {
       &-item {
@@ -97,6 +100,13 @@ $select-way-action-btn-bg-color: $blue;
           }
         }
       }
+    }
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .main-content {
+    .container-inner {
+      width: 66%;
     }
   }
 }
